@@ -131,3 +131,215 @@
       background: #e1e4e8;
       margin-bottom: 28px;
     }
+
+    
+    .stats-box {
+      background: white;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .issue-count-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .issue-count-area img {
+      height: 42px;
+      width: auto;
+    }
+
+    .issue-count-area h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #24292e;
+    }
+
+    .issue-count-area p {
+      font-size: 1.05rem;
+      color: #586069;
+      margin-top: 4px;
+    }
+
+    .status-legend {
+      display: flex;
+      gap: 24px;
+      font-size: 1rem;
+      color: #24292e;
+      align-items: center;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #e1e4e8;
+      border-top: 5px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .issues-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .issue-card {
+      background: white;
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+
+    .issue-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .card-top-border {
+      height: 6px;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .card-open .card-top-border { background: var(--open); }
+    .card-closed .card-top-border { background: var(--closed); }
+
+    .card-header {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafbfc;
+    }
+
+    .status-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .priority-badge {
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .priority-high { background: #ffebee; color: #c62828; }
+    .priority-medium { background: #fff3e0; color: #f57c00; }
+    .priority-low { background: #f1f3f5; color: #495057; }
+
+    .card-upper {
+      padding: 0 20px 20px;
+    }
+
+    .issue-title {
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin: 16px 0 8px;
+      color: #24292e;
+    }
+
+    .issue-desc {
+      color: #586069;
+      font-size: 0.94rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+   .labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;   
+  padding-bottom: 10px;  
+  position: relative;
+}
+
+
+    .labels::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-radius: 2px;
+      opacity: 0.8;
+    }
+
+    .label-badge {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      border: 1px solid;
+    }
+
+    .label-bug     { color: var(--bug-text);     background: var(--bug-bg);     border-color: var(--bug-text); }
+    .label-enhancement { color: var(--enhancement-text); background: var(--enhancement-bg); border-color: var(--enhancement-text); }
+    .label-helpwanted, .label-goodfirst, .label-doc, .label-other {
+      color: var(--help-text); background: var(--help-bg); border-color: var(--help-text);
+    }
+
+    .card-footer {
+      background: var(--footer-bg);
+      padding: 16px 20px;
+      border-top: 1px solid #ebedf0;
+      font-size: 0.88rem;
+      color: #586069;
+    }
+
+ .footer-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;   
+  align-items: center;
+}
+
+
+
+    .issue-number {
+      font-weight: 500;
+      color: #586069;
+    }
+
